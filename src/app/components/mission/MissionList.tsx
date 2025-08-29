@@ -30,15 +30,16 @@ export default function MissionList({ missions }: MissionListProps) {
 
   return (
     <div>
-      {/* Cards en mobile (< 1280px) */}
-      <div className="block xl:hidden space-y-4">
+      {/* Cards en mobile (1560 < px) */}
+      {/* Cards en mobile (1560 < px) */}
+      <div className="block 2xl:hidden space-y-4">
         {sorted.map((m) => (
           <MissionCard key={m.id} {...m} />
         ))}
       </div>
 
-      {/* Table en desktop (≥ 1280px) */}
-      <div className="hidden xl:block">
+      {/* Table en desktop (1560 ≥ 1280px) */}
+      <div className="hidden 2xl:block">
         <MissionTable missions={sorted} />
       </div>
     </div>

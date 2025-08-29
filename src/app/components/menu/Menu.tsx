@@ -35,7 +35,7 @@ export default function Menu() {
       {/* Menu principal */}
      <aside
         ref={menuRef}
-        className={`fixed top-0 left-0 h-full w-[320px] xl:w-[200px] bg-white border-r border-gray-400 z-40
+        className={`fixed top-0 left-0 min-h-screen w-[320px] xl:w-[200px] bg-white border-r border-gray-400 z-40
                     transform transition-transform duration-300
                     ${isOpen ? "translate-x-0" : "-translate-x-full"} 
                     lg:translate-x-0 lg:static lg:block `}
@@ -68,7 +68,7 @@ export default function Menu() {
           </div>
 
           {/* Bottom */}
-          <nav className="space-y-1 pb-4">
+          <nav className="sticky bottom-0 space-y-1 pb-4">
             <MenuItem href="/parametres" label="Paramètres" />
             <MenuItem href="/contact" label="Contact" />
             <MenuItem href="/logout" label="Déconnexion" />
